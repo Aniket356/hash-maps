@@ -83,6 +83,7 @@ function createHashMap() {
     for (let i = 0; i < buckets.length; i++) {
       buckets[i] = null;
     }
+    numberOfKeys = 0;
   }
 
   function keys() {
