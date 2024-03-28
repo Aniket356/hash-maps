@@ -19,11 +19,9 @@ function createHashMap() {
 
   function growBuckets() {
     const newSize = 2 * buckets.length;
-    const newBuckets = new Array(newSize);
-    for (let i = 0; i < buckets.length; i++) {
-      newBuckets[i] = buckets[i];
+    for (let i = buckets.length; i < newSize; i++) {
+      buckets[i] = null;
     }
-    buckets = newBuckets;
   }
 
   function set(key, value) {
